@@ -13,13 +13,12 @@ questions = ["What is the presenting complaint?",
              "Any known allergies?", 
              "Any other significant medical histories?"]
 while True:
-    
-    print('Enter the name of cat ' + str(len(catNames) + 1) +
-      ' (Or enter nothing to stop.):') # Takes the length of the cat names list and adds one to it
-    name = input()
-    if name == '':
+    for i in range(len(questions)):
+        print((i) + ("Or enter nothing to stop.")) # Takes the length of the cat names list and adds one to it
+    ans = input()
+    if ans == '':
         break
-    catNames = catNames + [name]  # list concatenation # Adding to the list of cats
+    triage_questions = triage_questions + [ans]  # list concatenation # Adding to the list of cats
 print('The cat names are:')
-for name in catNames:
-    print('  ' + name)
+for ans in triage_questions:
+    print('  ' + ans)
